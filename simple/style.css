@@ -1,0 +1,240 @@
+/* Estilo creado por y para Virtual Championship Series (virtualchampionshipseries.es) */
+/* Incluido como parte del repositorio https://github.com/Joboufra/ac-server-manager-css-revamp */
+
+:root {
+  --color-main: #006A5D; /* Color principal del tema */
+  --color-secondary: #2E2E2E; /* Color secundario del tema */
+  --color-background: #1F1F1F; /* Color de fondo */
+  --color-background-body: #151515; /* Color de fondo del body */
+  --color-hover: #2E2E2E; /* Color al pasar por encima el ratón */
+  --color-text: #fff; /* Color del texto */
+  --color-card-bg: #2D2D2D; /* Color de fondo de las tarjetas (botones Quick race etc del inicio) */
+  --color-form-bg: #111111; /* Color de fondo de los campos rellenables (chat x ej) */
+  --color-link-hover: #979797; /* Color al pasar por encima de un enlace */
+  --color-alert-success: #208e23; /* Color de popup notificaciones ok */
+  --color-alert-danger: #ff4136; /* Color de popup notificaciones de error */
+  --color-card-custom: #164B39; /* Color adicional configurable para las tarjetas */
+  --color-card-svg: #FFFFFF; /* Color de los SVG dentro de las tarjetas */
+  --background-chat-container: #00000087;
+}
+
+/* Navbar */
+.navbar-brand {
+  background-image: url(https://i.ibb.co/LRKCqwM/VCS-LOGO.png) !important;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: -16px;
+  color: transparent !important;
+}
+
+/* Body */
+body {
+  background-color: var(--color-background-body);
+}
+
+/* Card */
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: var(--color-background);
+  background-clip: border-box;
+  border: 1px solid var(--color-main);
+  border-radius: 1.5rem;
+  color: var(--color-text);
+}
+
+.card:hover {
+  background-color: var(--color-card-bg);
+}
+
+.card-header {
+  padding: .75rem 1.25rem;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  font-family: system-ui;
+  display: flex;
+  background-color: var(--color-main);
+  border-radius: 1.5rem;
+  border-bottom: 1px solid #000;
+  justify-content: center;
+}
+
+.card-header:first-child {
+  border-radius: calc(1.25rem - 1px) calc(1.25rem - 1px) 0 0;
+}
+
+.next-race-details {
+  padding: .75rem 1.25rem;
+  background-color: #0000;
+}
+
+.card .svg-inline--fa {
+  color: var(--color-card-svg);
+}
+
+/* Form Controls y Selects */
+.form-control, .ms-selectable, .ms-selection, .ms-container *:not(.ms-hover):not(span):not(.bg-mod):not(.bg-dlc), .select2-selection, .select2-dropdown, .select2-dropdown input.select2-search__field {
+  background: var(--color-form-bg) !important;
+  color: var(--color-text) !important;
+}
+
+/* Links */
+a:hover {
+  color: var(--color-link-hover);
+}
+
+.bg-primary {
+  border-color: var(--color-secondary);
+  background-color: var(--color-main) !important;
+}
+
+/* Sidebar */
+.sidebar-sticky, .sidebar {
+  background-color: var(--color-background);
+  border-right: 1px solid #000;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  margin-top: 0;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
+  background-color: var(--color-background);
+}
+
+/* Buttons */
+.btn {
+  border: none;
+  border-radius: 15px;
+  padding: 8px 16px;
+  font-size: 12px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Multiserver Dropdown */
+.multiserver-dropdown .multiserver {
+  padding: 6px;
+  margin: 5px;
+  display: block;
+  border: 2px solid #949494;
+  border-radius: .25rem;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.border-primary {
+  border-color: var(--color-main);
+}
+
+/* Alertas */
+.alert {
+  color: var(--color-text);
+  border: 0;
+}
+
+/* Badges */
+.badge-success {
+  background-color: var(--color-alert-success);
+}
+
+.badge-danger {
+  background-color: var(--color-alert-danger);
+}
+
+/* Mapa y chat */
+.img-fluid {
+  height: auto;
+}
+
+#map {
+  position: relative;
+  border-radius: .25rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#chat-container {
+  overflow-y: scroll;
+  max-height: 120px;
+  border-radius: 1px;
+  scroll-behavior: smooth;
+  padding-left: 3rem;
+  resize: vertical;
+  background-color: var(--background-chat-container)
+}
+
+/* Livetiming */
+#event-title {
+  font-size: 1.5em;
+  font-family: 'Source Sans Pro';
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+#live-table, #live-table-disconnected {
+  font-family: 'Source Sans Pro';
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.80em;
+}
+
+.table {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+  background-color: #000000;
+}
+
+.table-bordered th, .table-bordered td {
+  border: unset;
+}
+
+.table th {
+  background: var(--color-main);
+  vertical-align: middle;
+}
+
+.table td {
+  vertical-align: middle;
+}
+
+.table tr:hover {
+  background: var(--color-hover);
+  vertical-align: middle;
+}
+
+.table .badge {
+  font-size: 0.95em;
+}
+
+.table .float-right {
+  float: none !important;
+}
+
+/* Championship Table */
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #000;
+}
+
+.table-striped tbody tr:nth-of-type(odd):hover {
+  background: var(--color-hover);
+}
+
+.table-championship {
+  font-family: 'Source Sans Pro';
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.90em;
+}
+
+.race-number { 
+  display: none; 
+}
